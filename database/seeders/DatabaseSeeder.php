@@ -20,5 +20,20 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call([
+            adminSeeder::class,
+            tiendaSeeder::class,
+            deliverySeeder::class,
+            clientesSeeder::class,
+            estadopedidoSeeder::class,
+            tipoproductoSeeder::class,
+            consumoSeeder::class,
+            pedidosSeeder::class,
+            productosSeeder::class,
+            pedido_itemsSeeder::class,
+            ingredienteSeeder::class,
+            productoIngredienteSeeder::class,
+        ]);
     }
 }
