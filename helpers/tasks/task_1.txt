@@ -1,0 +1,22 @@
+# MAIN
+
+1- Corregir Actualizacion de datos de la tabla clientes en el archivo pagar.blade.php (Al momento de ingresar los datos en el formulario no ingresan los datos al cliente respectivo)
+   Nota: revisar el idCliente al momento de actualizar
+
+2- Definir variable $tiendaFooter['direccion_tienda'] en footer.blade.php (El ejemplo esta en footer.php de carbonybrasas)
+
+3- Corregir moneda EUR en el array $store debe decir PEN.
+
+5 - Corregir error cuando no existe el usuario al momento de loguearse.
+
+6 - Usuario no inicia sesion al momento de registrarse
+
+
+
+
+
+# ADMIN
+
+1 - Corregir error 500 de consola javascript en el administrador
+
+2 - No guarda en la base de datos el Costo de Delivery de tienda del administrador

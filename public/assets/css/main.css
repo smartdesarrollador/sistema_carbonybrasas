@@ -1,0 +1,237 @@
+
+
+@font-face {
+    font-family: "Helvetica Bold";
+    src: url("../fonts/HelveticaNeueBoldItalic.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Helvetica Light";
+    src: url("../fonts/HelveticaNeueLightItalic.ttf");
+    font-display: swap;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
+}
+
+.separador {
+    border-top-style: solid;
+    border-top-width: 1px;
+    width: 100%;
+}
+
+.link-activo {
+    color: #fbf005 !important
+}
+
+/*
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #EEEE16 #CFD8DC;
+}
+
+body::-webkit-scrollbar-track {
+    background: #CFD8DC;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #EEEE16;
+    border-radius: 6px;
+    border: 3px solid #EEEE16;
+}
+*/
+
+/*GOOGLE BUTTON*/
+
+/*GOOGLE BUTTON*/
+#customBtn {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: 100%;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+}
+
+#customBtn:hover {
+    cursor: pointer;
+}
+
+span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+
+span.icon {
+    background: url('../img/g-normal.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+}
+
+span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* END  GOOGLE BUTTON*/
+
+.text-richard {
+    color: #000000 !important;
+}
+
+.text-richardNotImportant {
+    color: #000000;
+}
+
+.modal {
+    z-index: 2001;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.removeArrows input::-webkit-outer-spin-button,
+.removeArrows input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+/* Firefox */
+.removeArrows input[type=number] {
+    -moz-appearance: textfield !important;
+}
+
+/*
+########################## - MEDIAQUERIES ##############
+*/
+@media (max-width: 576px) {
+    .main-container {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .main-container {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .main-container {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .main-container {
+        margin-top: 150px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .main-container {
+        margin-top: 150px;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.pac-container {
+    z-index: 2147483647 !important;
+}
+
+
+.ingrediente-button {
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+    /*impedir que se seleccione el texto*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+input:checked + label {
+    background-color: #000000 !important;
+    color: white;
+}
+
+input:checked + label:after {
+    font-family: FontAwesome;
+    background-color: #000000 !important;
+    color: white;
+    content: "\f00c";
+}
+
+.swal2-container {
+    z-index: 9999 !important;
+}
+
+.bg-richard-yellow{
+    border: 2px solid #fff;
+    padding: 0.4em 1.7em;
+    color: #6a67ce;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    font-size: 1em;
+    background: #fff;
+    box-shadow: 0 0px 45px rgba(0, 0, 0, .2);
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+.bg-transparent {
+    background-color: #000000 !important;
+}
+
+/* Pollos y Parrillas Richards */
+
+#img_logo {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/* Pollos y Parrillas Richards */
+.satisfy {
+    font-family: 'Satisfy', cursive;
+}
+
+
+a.nav-link.dropdown-toggle {
+    background: #18C2C4;
+    border-radius: 5px;
+}
