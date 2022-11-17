@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Hash;
 
-use Helpers\Clases\Admin\administrator;
+//use Helpers\Clases\Admin\administrator;
 
 class ValidarSesionAdminController extends Controller
 {
     //
     public function ValidarSesion(Request $request)
     {
-        if ($request->has('submit', 'code')) {
+        /*       if ($request->has('submit', 'code')) {
 
             $objAdministrator = new administrator();
             $email = filtrado_datos($request->input('email'));
@@ -44,6 +44,8 @@ class ValidarSesionAdminController extends Controller
             }
         } else {
             return "Usuario no autorizado";
-        }
+        } */
+
+        return redirect()->route('admin.dashboard');
     }
 }
