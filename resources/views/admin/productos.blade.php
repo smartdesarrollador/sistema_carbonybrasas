@@ -8,8 +8,8 @@
 @endsection
 
 @section('scripts_head_admin')
-    <script src="{{ asset('admin_assets/library/js/intersection-observer.js') }}"></script>
-    <script src="{{ asset('admin_assets/library/js/lazyload.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin_assets/library/js/intersection-observer.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin_assets/library/js/lazyload.min.js') }}"></script>
 @endsection
 
 @section('styles_admin')
@@ -79,9 +79,9 @@
 
             $.ajax({
                     url: "{{ route('admin.ajax.buscar_productos') }}",
-                    headers: {
+                    /* headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
+                    }, */
                     type: 'POST',
                     dataType: 'html',
                     data: {

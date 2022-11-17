@@ -27,7 +27,7 @@
     @section('scripts_dashboard_admin')
     @show
     @include('layout.layout_admin.footer')
-  
+
     @include('layout.layout_admin.scripts')
     @section('scripts_admin')
     @show
