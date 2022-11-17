@@ -1,0 +1,32 @@
+Instalar dependencias de laravel despues de clonar repositorio
+
+1- Instalar Vendor
+
+composer install
+
+2- Instalar node_modules
+
+npm install
+
+3 - Copiar los archivos de vendor de Izipay a la carpeta correspondiente
+
+4- Crear una base de datos
+
+5- Crear archivo .env
+
+6- Generar clave
+
+php artisan key:generate
+
+7- Ejecutar migraciones
+
+php artisan migrate
+
+8- Ejecutar seeders
+
+php artisan db:seed
+
+—------------------------------------------
+
+
+composer dump-autoload --ignore-platform-reqs

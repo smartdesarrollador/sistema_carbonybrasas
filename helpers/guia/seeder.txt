@@ -1,0 +1,8 @@
+- Crear Seeder
+php artisan make:seeder UserSeeder
+
+- Ejecutar Seeders
+php artisan db:seed
+
+- refrescar migraciones y seeders
+php artisan migrate:fresh --seed

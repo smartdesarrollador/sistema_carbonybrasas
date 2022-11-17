@@ -1,0 +1,439 @@
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+div#logo {
+    float: left;
+}
+
+#logo a {
+    float: left;
+    font-size: .8em;
+    text-transform: capitalize;
+    display: initial;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 800;
+    padding: 3px 0;
+}
+
+#logo a span {
+    color: #fff;
+
+}
+
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+}
+
+/* Styling the links */
+nav a {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+}
+
+nav ul li ul li:hover {
+    background: #fae576;
+}
+
+/* Background color change on Hover */
+
+nav a:hover {
+    color: #ffe68b;
+}
+
+nav ul.inner-ul li a:hover {
+    color: #333;
+}
+
+.menu li.active a {
+    color: #333;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 30px;
+    background: #fff;
+    padding: 10px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+nav ul ul li a {
+    color: #333;
+    padding: 5px 10px;
+    display: block;
+}
+
+/* Second, Third and more Tiers
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:only-child:after {
+    content: '';
+}
+
+
+@media all and (max-width: 800px) {
+
+    div#logo {
+        float: none;
+    }
+
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    nav a {
+        color: #333;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+
+    
+
+    .menu .toggle {
+        float: none;
+        text-align: center;
+        margin: auto;
+        width: 30%;
+        padding: 5px;
+        font-weight: normal;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .toggle:hover {
+        color: #333;
+        background-color: #fff;
+    }
+
+
+    [id^=drop]:checked + ul {
+        display: block;
+        background: #fff;
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: transparent;
+    }
+
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+
+
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #fff;
+    }
+
+    nav ul ul li a {
+        font-size: 15px;
+    }
+
+    ul.inner-ul {
+        padding: 0 !important;
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+
+    /* Hide menus on hover */
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+
+    }
+
+
+}
+
+
+@media all and (max-width: 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+
+}
+
+
+.user span.fa {
+}
+
+.login-icon a, .login-icon a:hover {
+    border: 2px solid #fff;
+    padding: 0.4em 1.7em;
+    color: #6a67ce;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    font-size: 1em;
+    background: #fff;
+    box-shadow: 0 0px 45px rgba(0, 0, 0, .2);
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+
+@media (max-width: 991px) {
+    .login-icon {
+        position: absolute;
+        right: 10%;
+    }
+
+    .information p {
+        font-size: 15px;
+    }
+
+    nav ul {
+        margin-right: 3.5em;
+    }
+
+    #logo a {
+        font-size: .7em;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 10px 8px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        margin-right: 5.5em;
+    }
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        margin-right: 0em;
+    }
+
+    .login-icon {
+        right: 12%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        float: none;
+    }
+
+    div#logo {
+        float: none;
+    }
+
+    .login-icon {
+        right: 11%;
+    }
+}
+
+@media (max-width: 736px) {
+    .login-icon {
+        right: 21%;
+    }
+
+}
+
+@media (max-width: 684px) {
+    .login-icon {
+        right: 19%;
+    }
+}
+
+@media (max-width: 668px) {
+
+    .login-icon {
+        right: 18%;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .login-icon {
+        right: 17%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #logo a {
+        font-size: .6em;
+    }
+
+    .login-icon {
+        right: 14.5%;
+    }
+}
+
+@media (max-width: 568px) {
+    .login-icon {
+        right: 18.5%;
+    }
+
+}
+
+
+/* Pollos y Parrillas Richards */
+
+#logo a {
+    float: left;
+    font-size: .8em;
+    text-transform: capitalize;
+    display: initial;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 800;
+    padding: 3px 0;
+}
+
+.login-icon a, .login-icon a:hover {
+    border: 2px solid #fff;
+    padding: 0.4em 1.7em;
+    color: #6a67ce;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    font-size: 1em;
+    background: #FFFFFF;
+    box-shadow: 0 0px 45px rgb(0 0 0 / 20%);
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+/* Pollos y Parrillas Richards */
+
+
+
+/* Stylinf the toggle lable */
+.toggle {
+    display: block;
+    padding: 8px 15px;
+    font-size: 17px;
+    text-decoration: none;
+    border: none;
+    float: left;
+    background-color: #fff;
+    color: #6a67ce;
+
+}
+
