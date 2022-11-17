@@ -39,7 +39,7 @@ use App\Http\Controllers\Main\TerminosController;
 
 
 use App\Http\Controllers\Main\Login\RegisterCustomerController;
-use App\Http\Controllers\Main\Login\logOutController;
+use App\Http\Controllers\Main\Login\LogOutController;
 use App\Http\Controllers\Main\Login\verificarUsuarioController;
 use App\Http\Controllers\Main\MiCuentaController;
 
@@ -201,7 +201,7 @@ Route::get('/script/delivery/getdeliveryzones', [GetDeliveryZonesController::cla
 
 //------- Main Login ---------
 Route::post('/login/register', [RegisterCustomerController::class, 'registerCustomer'])->name('login.register');
-Route::get('/login/logout', [logOutController::class, 'logout'])->name('login.logout');
+Route::get('/login/logout', [LogOutController::class, 'logout'])->name('login.logout');
 Route::post('/login/verificar', [verificarUsuarioController::class, 'verificarUsuario'])->name('login.verificar');
 Route::get('/mi-cuenta', [MiCuentaController::class, 'index'])->name('login.mi-cuenta');
 
@@ -217,29 +217,29 @@ Route::post('/script/checkout', [CheckoutController::class, 'checkout'])->name('
 Route::get('/admin', [InicioAdminController::class, 'index'])->name('admin.inicio');
 Route::post('/admin/script/validar_sesion', [ValidarSesionAdminController::class, 'ValidarSesion'])->name('admin.script.validar_sesion');
 
-//Route::middleware(['autenticacion'])->group(function () {
-Route::get('/admin/dashboard/{valor?}', [DashboardController::class, 'index'])->name('admin.dashboard');
-Route::get('/admin/dashboardmin', [DashboardMinController::class, 'index'])->name('admin.dashboardmin');
-Route::get('/admin/tienda', [TiendaAdminController::class, 'index'])->name('admin.tienda');
-Route::get('/admin/productos', [ProductosAdminController::class, 'index'])->name('admin.productos');
-Route::get('/admin/updateproduct/{idProducto}', [UpdateProductAdminController::class, 'index'])->name('admin.updateproduct.index');
-Route::post('/admin/updateproduct', [UpdateProductAdminController::class, 'UpdateProduct'])->name('admin.updateproduct.update');
-Route::get('/admin/addProduct', [AddProductAdminController::class, 'index'])->name('admin.addproduct.index');
-Route::post('/admin/addProduct/create', [AddProductAdminController::class, 'AddProduct'])->name('admin.addproduct.create');
+Route::middleware(['autenticacion'])->group(function () {
+    Route::get('/admin/dashboard/{valor?}', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/dashboardmin', [DashboardMinController::class, 'index'])->name('admin.dashboardmin');
+    Route::get('/admin/tienda', [TiendaAdminController::class, 'index'])->name('admin.tienda');
+    Route::get('/admin/productos', [ProductosAdminController::class, 'index'])->name('admin.productos');
+    Route::get('/admin/updateproduct/{idProducto}', [UpdateProductAdminController::class, 'index'])->name('admin.updateproduct.index');
+    Route::post('/admin/updateproduct', [UpdateProductAdminController::class, 'UpdateProduct'])->name('admin.updateproduct.update');
+    Route::get('/admin/addProduct', [AddProductAdminController::class, 'index'])->name('admin.addproduct.index');
+    Route::post('/admin/addProduct/create', [AddProductAdminController::class, 'AddProduct'])->name('admin.addproduct.create');
 
-//---------- Admin Scripts -------------
-Route::get('/admin/script/changestorestatus', [ChangeStoreStatusAdminController::class, 'ChangeStoreStatus'])->name('admin.script.changestorestatus');
-Route::post('/admin/script/cambiarpreciodelivery', [CambiarPrecioDeliveryAdminController::class, 'CambiarPrecioDelivery'])->name('admin.script.cambiarPrecioDelivery');
-Route::post('/admin/script/update_action', [UpdateActionController::class, 'UpdateAction'])->name('admin.script.update_action');
-Route::get('/admin/script/logout', [LogOutAdminController::class, 'LogOut'])->name('admin.script.logout');
+    //---------- Admin Scripts -------------
+    Route::get('/admin/script/changestorestatus', [ChangeStoreStatusAdminController::class, 'ChangeStoreStatus'])->name('admin.script.changestorestatus');
+    Route::post('/admin/script/cambiarpreciodelivery', [CambiarPrecioDeliveryAdminController::class, 'CambiarPrecioDelivery'])->name('admin.script.cambiarPrecioDelivery');
+    Route::post('/admin/script/update_action', [UpdateActionController::class, 'UpdateAction'])->name('admin.script.update_action');
+    Route::get('/admin/script/logout', [LogOutAdminController::class, 'LogOut'])->name('admin.script.logout');
 
-//----------- Admin Ajax ---------------
-Route::get('/admin/ajax/update_pedidos', [UpdatePedidosAdminController::class, 'index'])->name('admin.ajax.update_pedidos');
-Route::post('/admin/ajax/buscar_productos', [BuscarProductosAdminController::class, 'BuscarProductos'])->name('admin.ajax.buscar_productos');
+    //----------- Admin Ajax ---------------
+    Route::get('/admin/ajax/update_pedidos', [UpdatePedidosAdminController::class, 'index'])->name('admin.ajax.update_pedidos');
+    Route::post('/admin/ajax/buscar_productos', [BuscarProductosAdminController::class, 'BuscarProductos'])->name('admin.ajax.buscar_productos');
 
-//------------ Admin Utils --------------
-Route::get('/admin/utils/printreceipt/{idPedido}', [PrintReceiptAdminController::class, 'PrintReceipt'])->name('admin.utils.receipt');
-//});
+    //------------ Admin Utils --------------
+    Route::get('/admin/utils/printreceipt/{idPedido}', [PrintReceiptAdminController::class, 'PrintReceipt'])->name('admin.utils.receipt');
+});
 
 
 //--------- Test Admin ---------
