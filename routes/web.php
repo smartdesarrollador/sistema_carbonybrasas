@@ -420,3 +420,15 @@ Route::get('/no-autorizado', function () {
 //-------------- Test Form -------------------------
 Route::get('/test/file', [FileTestController::class, 'file'])->name('test.file');
 Route::post('/test/subir_imagen', [FileTestController::class, 'subir_imagen'])->name('test.subir_imagen');
+
+Route::get('/crear_sesion', function () {
+
+    session(['valor_3' => 'contenido nueva sesion']);
+
+    return "se creo la sesion con exito";
+});
+
+Route::get('/ver_sesiones', function () {
+
+    dd(session()->all());
+});
